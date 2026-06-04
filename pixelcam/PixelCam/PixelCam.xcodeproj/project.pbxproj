@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A1B2C3D4E5F60718293A001 /* PixelCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A002 /* PixelCamApp.swift */; };
+		9A1B2C3D4E5F60718293A003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A004 /* ContentView.swift */; };
+		9A1B2C3D4E5F60718293A005 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A006 /* CameraView.swift */; };
+		9A1B2C3D4E5F60718293A007 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A008 /* CameraViewController.swift */; };
+		9A1B2C3D4E5F60718293A009 /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A00A /* ImageProcessing.swift */; };
+		9A1B2C3D4E5F60718293A00B /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A00C /* ShareSheet.swift */; };
+		9A1B2C3D4E5F60718293A020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A021 /* UIKit.framework */; };
+		9A1B2C3D4E5F60718293A022 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A023 /* AVFoundation.framework */; };
+		9A1B2C3D4E5F60718293A024 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A025 /* Photos.framework */; };
+		9A1B2C3D4E5F60718293A026 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A027 /* Accelerate.framework */; };
+		9A1B2C3D4E5F60718293A0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1B2C3D4E5F60718293A0C0 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9A1B2C3D4E5F60718293A002 /* PixelCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelCamApp.swift; sourceTree = "<group>"; };
+		9A1B2C3D4E5F60718293A004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9A1B2C3D4E5F60718293A006 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9A1B2C3D4E5F60718293A008 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		9A1B2C3D4E5F60718293A00A /* ImageProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessing.swift; sourceTree = "<group>"; };
+		9A1B2C3D4E5F60718293A00C /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		9A1B2C3D4E5F60718293A010 /* PixelCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1B2C3D4E5F60718293A011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A1B2C3D4E5F60718293A021 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9A1B2C3D4E5F60718293A023 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9A1B2C3D4E5F60718293A025 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		9A1B2C3D4E5F60718293A027 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		9A1B2C3D4E5F60718293A0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A1B2C3D4E5F60718293A030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1B2C3D4E5F60718293A020 /* UIKit.framework in Frameworks */,
+				9A1B2C3D4E5F60718293A022 /* AVFoundation.framework in Frameworks */,
+				9A1B2C3D4E5F60718293A024 /* Photos.framework in Frameworks */,
+				9A1B2C3D4E5F60718293A026 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A1B2C3D4E5F60718293A040 = {
+			isa = PBXGroup;
+			children = (
+				9A1B2C3D4E5F60718293A041 /* PixelCam */,
+				9A1B2C3D4E5F60718293A042 /* Frameworks */,
+				9A1B2C3D4E5F60718293A043 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A1B2C3D4E5F60718293A041 /* PixelCam */ = {
+			isa = PBXGroup;
+			children = (
+				9A1B2C3D4E5F60718293A011 /* Info.plist */,
+				9A1B2C3D4E5F60718293A002 /* PixelCamApp.swift */,
+				9A1B2C3D4E5F60718293A004 /* ContentView.swift */,
+				9A1B2C3D4E5F60718293A006 /* CameraView.swift */,
+				9A1B2C3D4E5F60718293A008 /* CameraViewController.swift */,
+				9A1B2C3D4E5F60718293A00A /* ImageProcessing.swift */,
+				9A1B2C3D4E5F60718293A00C /* ShareSheet.swift */,
+				9A1B2C3D4E5F60718293A0C0 /* Assets.xcassets */,
+			);
+			path = PixelCam;
+			sourceTree = "<group>";
+		};
+		9A1B2C3D4E5F60718293A042 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A1B2C3D4E5F60718293A021 /* UIKit.framework */,
+				9A1B2C3D4E5F60718293A023 /* AVFoundation.framework */,
+				9A1B2C3D4E5F60718293A025 /* Photos.framework */,
+				9A1B2C3D4E5F60718293A027 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A1B2C3D4E5F60718293A043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A1B2C3D4E5F60718293A010 /* PixelCam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A1B2C3D4E5F60718293A050 /* PixelCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1B2C3D4E5F60718293A060 /* Build configuration list for PBXNativeTarget "PixelCam" */;
+			buildPhases = (
+				9A1B2C3D4E5F60718293A052 /* Sources */,
+				9A1B2C3D4E5F60718293A030 /* Frameworks */,
+				9A1B2C3D4E5F60718293A054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixelCam;
+			productName = PixelCam;
+			productReference = 9A1B2C3D4E5F60718293A010 /* PixelCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A1B2C3D4E5F60718293A070 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					9A1B2C3D4E5F60718293A050 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 9A1B2C3D4E5F60718293A080 /* Build configuration list for PBXProject "PixelCam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A1B2C3D4E5F60718293A040;
+			productRefGroup = 9A1B2C3D4E5F60718293A043 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A1B2C3D4E5F60718293A050 /* PixelCam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A1B2C3D4E5F60718293A054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1B2C3D4E5F60718293A0C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A1B2C3D4E5F60718293A052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1B2C3D4E5F60718293A001 /* PixelCamApp.swift in Sources */,
+				9A1B2C3D4E5F60718293A003 /* ContentView.swift in Sources */,
+				9A1B2C3D4E5F60718293A005 /* CameraView.swift in Sources */,
+				9A1B2C3D4E5F60718293A007 /* CameraViewController.swift in Sources */,
+				9A1B2C3D4E5F60718293A009 /* ImageProcessing.swift in Sources */,
+				9A1B2C3D4E5F60718293A00B /* ShareSheet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9A1B2C3D4E5F60718293B000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+			};
+			name = Debug;
+		};
+		9A1B2C3D4E5F60718293B001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+			};
+			name = Release;
+		};
+		9A1B2C3D4E5F60718293B010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQQP5H3SF3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PixelCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tianwangzhongyin.PixelCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A1B2C3D4E5F60718293B011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WQQP5H3SF3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PixelCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tianwangzhongyin.PixelCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A1B2C3D4E5F60718293A060 /* Build configuration list for PBXNativeTarget "PixelCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1B2C3D4E5F60718293B010 /* Debug */,
+				9A1B2C3D4E5F60718293B011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9A1B2C3D4E5F60718293A080 /* Build configuration list for PBXProject "PixelCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1B2C3D4E5F60718293B000 /* Debug */,
+				9A1B2C3D4E5F60718293B001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A1B2C3D4E5F60718293A070 /* Project object */;
+}
