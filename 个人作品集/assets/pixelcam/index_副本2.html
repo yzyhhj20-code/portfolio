@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>像素相机 - PixelCam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-bottom: 4px solid #333;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            image-rendering: pixelated;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .tagline {
+            font-size: 24px;
+            color: #fff;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #333;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-item {
+            background: #1a1a1a;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-section {
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 360px;
+            margin: 40px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #333;
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #333 0%, #2a2a2a 100%);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #fff;
+            border: 1px solid #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #007aff 0%, #0051d5 100%);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0,122,255,0.4);
+        }
+
+        .aspect-ratios {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .ratio-item {
+            background: #1a1a1a;
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+
+        .ratio-item .ratio {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .ratio-item .label {
+            font-size: 14px;
+            color: #888;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            .logo-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <img src="PixelCam_icon_1024.png" alt="PixelCam Icon" class="app-icon">
+                <div>
+                    <h1>像素相机</h1>
+                    <p class="subtitle">PixelCam</p>
+                </div>
+            </div>
+            <p class="tagline">1-bit 黑白点阵相机，重拾像素时代的复古魅力</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>核心功能</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>三种像素模式</h3>
+                    <p>Clean（高对比度硬黑白）、Grit（Floyd–Steinberg 误差扩散）、Poster（Bayer 有序抖动）</p>
+                </div>
+                <div class="feature-card">
+                    <h3>实时预览</h3>
+                    <p>所见即所得的实时像素化预览，支持 Threshold 阈值调节</p>
+                </div>
+                <div class="feature-card">
+                    <h3>多种比例</h3>
+                    <p>支持 9:16、3:4、1:1、4:3、16:9 五种拍摄比例，适配各种社交平台</p>
+                </div>
+                <div class="feature-card">
+                    <h3>相册导入</h3>
+                    <p>支持从相册导入图片进行像素化处理，无需重新拍摄</p>
+                </div>
+                <div class="feature-card">
+                    <h3>保存分享</h3>
+                    <p>一键保存到相册，支持系统分享，轻松分享你的像素作品</p>
+                </div>
+                <div class="feature-card">
+                    <h3>闪光灯</h3>
+                    <p>支持闪光灯功能，在低光环境下也能拍出精彩的像素照片</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>产品展示</h2>
+            
+            <!-- 主图 - 大图居中 -->
+            <div style="text-align: center; margin: 40px 0;">
+                <img src="展示图主.jpg" alt="像素相机产品展示" style="max-width: 100%; height: auto; border-radius: 16px; max-height: 500px; object-fit: contain;">
+            </div>
+            
+            <!-- 四张图两两对称排列 -->
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="展示图1.jpg" alt="像素相机截图1">
+                </div>
+                <div class="gallery-item">
+                    <img src="展示图2.jpg" alt="像素相机截图2">
+                </div>
+                <div class="gallery-item">
+                    <img src="展示图3.jpg" alt="像素相机截图3">
+                </div>
+                <div class="gallery-item">
+                    <img src="展示图4.jpg" alt="像素相机截图4">
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>功能演示</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="演示视频1.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+        </section>
+
+        <section>
+            <h2>拍摄比例</h2>
+            <div class="aspect-ratios">
+                <div class="ratio-item">
+                    <div class="ratio">9:16</div>
+                    <div class="label">竖屏</div>
+                </div>
+                <div class="ratio-item">
+                    <div class="ratio">3:4</div>
+                    <div class="label">默认</div>
+                </div>
+                <div class="ratio-item">
+                    <div class="ratio">1:1</div>
+                    <div class="label">正方形</div>
+                </div>
+                <div class="ratio-item">
+                    <div class="ratio">4:3</div>
+                    <div class="label">经典</div>
+                </div>
+                <div class="ratio-item">
+                    <div class="ratio">16:9</div>
+                    <div class="label">横屏</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>技术栈</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">SwiftUI</span>
+                <span class="tech-badge">AVFoundation</span>
+                <span class="tech-badge">iOS</span>
+                <span class="tech-badge">Floyd–Steinberg 误差扩散</span>
+                <span class="tech-badge">Bayer 有序抖动</span>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 像素相机 - PixelCam. 用像素重新定义摄影.</p>
+        </div>
+    </footer>
+</body>
+</html>
